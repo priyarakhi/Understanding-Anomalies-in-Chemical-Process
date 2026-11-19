@@ -1,5 +1,6 @@
-# Understanding Anomalies in Chemical Processes – Task 1
+# Understanding Anomalies in Chemical Processes 
 
+Task:
 Interactive Streamlit dashboard for exploring the batch distillation dataset
 (butan-1-ol, propan-2-ol and water; 6 operating points, 13 runs, 11 sensors).
 
