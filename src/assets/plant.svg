@@ -1,0 +1,179 @@
+<svg id="plant" viewBox="0 0 900 640" role="img" aria-label="Interactive drawing of the batch distillation plant with its 11 sensors" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ar-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6b7280"/></marker>
+    <marker id="ar-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#c0392b"/></marker>
+    <marker id="ar-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2b6cb0"/></marker>
+    <marker id="ar-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#138a72"/></marker>
+    <marker id="ar-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8e44ad"/></marker>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e9edf2"/><stop offset=".45" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe4ea"/></linearGradient>
+    <linearGradient id="steelV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e3e8ee"/></linearGradient>
+    <linearGradient id="grad-C001" x1="0" y1="1" x2="0" y2="0"><stop id="C001-b" offset="0" stop-color="#f6c9a2"/><stop id="C001-t" offset="1" stop-color="#f8dcc2"/></linearGradient>
+    <linearGradient id="grad-C002" x1="0" y1="1" x2="0" y2="0"><stop id="C002-b" offset="0" stop-color="#f8dcc2"/><stop id="C002-t" offset="1" stop-color="#e3ecf6"/></linearGradient>
+    <linearGradient id="grad-C003" x1="0" y1="1" x2="0" y2="0"><stop id="C003-b" offset="0" stop-color="#e3ecf6"/><stop id="C003-t" offset="1" stop-color="#d2e2f3"/></linearGradient>
+    <pattern id="packing" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="9" stroke="#334155" stroke-width="0.7" opacity="0.16"/></pattern>
+    <clipPath id="clip-col"><rect x="267" y="142" width="106" height="304" rx="12"/></clipPath>
+    <clipPath id="clip-reb"><rect x="212" y="482" width="216" height="91" rx="40"/></clipPath>
+    <clipPath id="clip-v002"><rect x="552" y="202" width="126" height="58" rx="11"/></clipPath>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="2" stdDeviation="2.2" flood-color="#0f172a" flood-opacity="0.13"/></filter>
+  </defs>
+
+  <!-- ===================== pipes ===================== -->
+  <g id="pipes" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path class="pipe" d="M320 140 V80 H519"/>
+    <path class="pipe" d="M320 448 V482"/>
+    <path class="pipe" d="M615 108 V200"/>
+    <path class="pipe" d="M580 262 V300 M560 320 H470 V165 H375"/>
+    <path class="pipe" d="M650 262 V300 M650 340 V440 H760"/>
+    <path class="pipe" d="M840 150 V80 H707"/>
+    <path class="pipe" d="M707 100 H790 V150"/>
+    <path class="pipe" d="M615 52 V26 H760"/>
+    <path class="flow" id="flow-vapour" d="M320 140 V80 H517" stroke="#c0392b" marker-end="url(#ar-red)"/>
+    <path class="flow" id="flow-column" d="M320 482 V448" stroke="#c0392b"/>
+    <path class="flow" id="flow-condensate" d="M615 108 V197" stroke="#2b6cb0" marker-end="url(#ar-blue)"/>
+    <path class="flow" id="flow-reflux" d="M580 262 V300 M560 320 H470 V165 H378" stroke="#138a72" marker-end="url(#ar-green)"/>
+    <path class="flow" id="flow-distillate" d="M650 262 V300 M650 340 V440 H757" stroke="#8e44ad" marker-end="url(#ar-purple)"/>
+    <path class="flow" id="flow-cool-in" d="M840 150 V80 H710" stroke="#2b6cb0" marker-end="url(#ar-blue)"/>
+    <path class="flow" id="flow-cool-out" d="M707 100 H790 V147" stroke="#2b6cb0" marker-end="url(#ar-blue)"/>
+    <path class="flow" id="flow-vacuum" d="M615 52 V26 H757" stroke="#6b7280" marker-end="url(#ar-gray)"/>
+  </g>
+  <g class="flowlabel">
+    <text x="420" y="72">vapour</text>
+    <text x="622" y="160">condensate</text>
+    <text x="478" y="196">reflux</text>
+    <text x="668" y="458">distillate</text>
+    <text x="640" y="18">to vacuum</text>
+    <text x="700" y="134">cooling loop</text>
+  </g>
+
+  <!-- ===================== column ===================== -->
+  <g id="column-body" filter="url(#soft)">
+    <rect x="265" y="140" width="110" height="308" rx="14" fill="url(#steel)" stroke="#475569" stroke-width="1.5"/>
+  </g>
+  <g id="eq-C003" class="eq" data-id="C003"><rect class="sect" x="267" y="142" width="106" height="98" fill="url(#grad-C003)"/><rect x="267" y="142" width="106" height="98" fill="url(#packing)" pointer-events="none"/></g>
+  <g id="eq-C002" class="eq" data-id="C002"><rect class="sect" x="267" y="246" width="106" height="96" fill="url(#grad-C002)"/><rect x="267" y="246" width="106" height="96" fill="url(#packing)" pointer-events="none"/></g>
+  <g id="eq-C001" class="eq" data-id="C001"><rect class="sect" x="267" y="348" width="106" height="98" fill="url(#grad-C001)"/><rect x="267" y="348" width="106" height="98" fill="url(#packing)" pointer-events="none"/></g>
+  <g id="particles" clip-path="url(#clip-col)" pointer-events="none">
+    <circle class="vap" cx="285" cy="440" r="2.6" style="animation-delay:0s"/>
+    <circle class="vap" cx="307" cy="440" r="2.2" style="animation-delay:-1.3s"/>
+    <circle class="vap" cx="329" cy="440" r="2.6" style="animation-delay:-2.7s"/>
+    <circle class="vap" cx="351" cy="440" r="2.2" style="animation-delay:-4.1s"/>
+    <circle class="vap" cx="296" cy="440" r="2" style="animation-delay:-5.2s"/>
+    <circle class="vap" cx="340" cy="440" r="2" style="animation-delay:-3.4s"/>
+    <rect class="drop" x="295" y="146" width="2" height="7" rx="1" style="animation-delay:-0.6s"/>
+    <rect class="drop" x="318" y="146" width="2" height="7" rx="1" style="animation-delay:-2.2s"/>
+    <rect class="drop" x="341" y="146" width="2" height="7" rx="1" style="animation-delay:-3.8s"/>
+    <rect class="drop" x="362" y="146" width="2" height="7" rx="1" style="animation-delay:-5.0s"/>
+    <rect class="drop" x="280" y="146" width="2" height="7" rx="1" style="animation-delay:-1.4s"/>
+  </g>
+  <rect class="flange" x="259" y="240" width="122" height="6" rx="2"/>
+  <rect class="flange" x="259" y="342" width="122" height="6" rx="2"/>
+  <text class="sectname" x="320" y="195">C003</text>
+  <text class="sectname" x="320" y="298">C002</text>
+  <text class="sectname" x="320" y="401">C001</text>
+  <text class="sublabel" x="328" y="132" style="text-anchor:start">column</text>
+
+  <!-- wall heaters -->
+  <!-- wall heaters (OP29 YAML): H708 at C003, H704 at C002, H706 at C001, H702 at the upper reboiler -->
+  <g id="eq-H708" class="eq wheater" data-id="H708"><rect x="372" y="146" width="14" height="92" fill="transparent"/><rect class="wallheater" x="376" y="150" width="6" height="84" rx="3"/><text class="htlabel" x="368" y="160" text-anchor="end">H708</text></g>
+  <g id="eq-H704" class="eq wheater" data-id="H704"><rect x="372" y="248" width="14" height="92" fill="transparent"/><rect class="wallheater" x="376" y="252" width="6" height="84" rx="3"/><text class="htlabel" x="368" y="262" text-anchor="end">H704</text></g>
+  <g id="eq-H706" class="eq wheater" data-id="H706"><rect x="372" y="350" width="14" height="92" fill="transparent"/><rect class="wallheater" x="376" y="354" width="6" height="84" rx="3"/><text class="htlabel" x="368" y="364" text-anchor="end">H706</text></g>
+  <!-- ===================== reboiler ===================== -->
+  <g id="eq-V001" class="eq" data-id="V001">
+    <rect class="vessel" x="210" y="480" width="220" height="95" rx="42" fill="url(#steelV)" filter="url(#soft)"/>
+    <g clip-path="url(#clip-reb)">
+      <rect id="liquid" x="205" y="516" width="230" height="70" fill="#f2b48a"/>
+      <path id="liquid-wave" class="wave" d="M150 516 q 12 -5 24 0 t 24 0 t 24 0 t 24 0 t 24 0 t 24 0 t 24 0 t 24 0 t 24 0 t 24 0 t 24 0 t 24 0 v 8 h -288 z"/>
+      <g class="bubbles">
+        <circle class="bub" cx="248" cy="566" r="3" style="animation-delay:0s"/>
+        <circle class="bub" cx="282" cy="566" r="2.5" style="animation-delay:-.7s"/>
+        <circle class="bub" cx="316" cy="566" r="3.2" style="animation-delay:-1.4s"/>
+        <circle class="bub" cx="352" cy="566" r="2.4" style="animation-delay:-.35s"/>
+        <circle class="bub" cx="388" cy="566" r="2.8" style="animation-delay:-1.05s"/>
+      </g>
+    </g>
+    <text class="eqname" x="320" y="502">Reboiler V001</text>
+  </g>
+  <g id="eq-H702" class="eq wheater" data-id="H702"><rect x="232" y="470" width="58" height="22" fill="transparent"/><rect class="wallheater" x="238" y="476" width="46" height="6" rx="3"/><text class="htlabel" x="232" y="482" text-anchor="end">H702</text></g>
+  <g id="eq-H701" class="eq" data-id="H701">
+    <rect x="232" y="585" width="176" height="20" rx="6" fill="transparent"/>
+    <polyline class="heater" points="236,588 248,600 260,588 272,600 284,588 296,600 308,588 320,600 332,588 344,600 356,588 368,600 380,588 392,600 404,588"/>
+    <text class="sublabel" x="320" y="624">main heater H701</text>
+  </g>
+
+  <!-- ===================== condenser ===================== -->
+  <g id="eq-HE" class="eq" data-id="HE">
+    <rect class="vessel" x="520" y="52" width="186" height="56" rx="28" fill="#eaf2fb" filter="url(#soft)"/>
+    <g class="tubes"><line x1="540" y1="66" x2="686" y2="66"/><line x1="536" y1="76" x2="690" y2="76"/><line x1="536" y1="86" x2="690" y2="86"/><line x1="540" y1="96" x2="686" y2="96"/></g>
+    <text class="eqname" x="613" y="78">Condensers</text>
+    <text class="sublabel" x="613" y="93">HE001 · HE002</text>
+  </g>
+
+  <!-- ===================== vacuum and cooling ===================== -->
+  <g id="eq-G001" class="eq" data-id="G001">
+    <rect class="vessel" x="760" y="6" width="120" height="40" rx="9" fill="url(#steelV)" filter="url(#soft)"/>
+    <text class="eqname" x="820" y="23">G001</text>
+    <text class="sublabel" x="820" y="38">vacuum TV1 · P301</text>
+  </g>
+  <g id="eq-TCU1" class="eq" data-id="TCU1">
+    <rect class="vessel" x="760" y="150" width="120" height="54" rx="10" fill="#eaf2fb" filter="url(#soft)"/>
+    <text class="eqname" x="820" y="173">TCU1</text>
+    <text class="sublabel" x="820" y="191">cooling thermostat</text>
+  </g>
+
+  <!-- ===================== buffer vessel ===================== -->
+  <g id="eq-V002" class="eq" data-id="V002">
+    <rect class="vessel" x="550" y="200" width="130" height="62" rx="13" fill="url(#steelV)" filter="url(#soft)"/>
+    <g clip-path="url(#clip-v002)">
+      <rect x="545" y="236" width="140" height="30" fill="#bcd5ef"/>
+      <path class="wave small" d="M500 236 q 8 -3 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0 v 6 h -224 z" fill="#bcd5ef"/>
+    </g>
+    <text class="eqname" x="615" y="222">Buffer vessel V002</text>
+  </g>
+
+  <!-- ===================== pumps ===================== -->
+  <g id="eq-P701" class="eq" data-id="P701">
+    <circle class="vessel" cx="580" cy="320" r="20" fill="url(#steelV)" filter="url(#soft)"/>
+    <g class="imp" id="imp-P701" style="transform-origin:580px 320px"><line x1="580" y1="308" x2="580" y2="332"/><line x1="569.6" y1="314" x2="590.4" y2="326"/><line x1="569.6" y1="326" x2="590.4" y2="314"/></g>
+    <circle cx="580" cy="320" r="3" fill="#334155"/>
+    <text class="sublabel" x="580" y="356">P701</text>
+  </g>
+  <g id="eq-P702" class="eq" data-id="P702">
+    <circle class="vessel" cx="650" cy="320" r="20" fill="url(#steelV)" filter="url(#soft)"/>
+    <g class="imp" id="imp-P702" style="transform-origin:650px 320px"><line x1="650" y1="308" x2="650" y2="332"/><line x1="639.6" y1="314" x2="660.4" y2="326"/><line x1="639.6" y1="326" x2="660.4" y2="314"/></g>
+    <circle cx="650" cy="320" r="3" fill="#334155"/>
+    <text class="sublabel" x="680" y="324" style="text-anchor:start">P702</text>
+  </g>
+
+  <!-- ===================== receiver ===================== -->
+  <g id="eq-RECV" class="eq" data-id="RECV">
+    <rect class="vessel" x="760" y="410" width="120" height="62" rx="12" fill="#f4ecf8" filter="url(#soft)"/>
+    <text class="eqname" x="820" y="436">Distillate</text>
+    <text class="sublabel" x="820" y="453">receiver (product)</text>
+  </g>
+
+  <!-- ===================== valves ===================== -->
+  <g id="eq-HV001" class="eq valve" data-id="HV001"><rect x="328" y="454" width="62" height="20" fill="transparent"/><line class="stub" x1="320" y1="464" x2="334" y2="464"/><polygon points="334,458 348,470 348,458 334,470"/><text class="valvelabel" x="353" y="468">HV001</text></g>
+  <g id="eq-HV009" class="eq valve" data-id="HV009"><rect x="434" y="519" width="64" height="22" fill="transparent"/><line class="stub" x1="429" y1="530" x2="440" y2="530"/><polygon points="440,524 454,536 454,524 440,536"/><text class="valvelabel" x="459" y="534">HV009</text></g>
+  <g id="eq-HV004" class="eq valve" data-id="HV004"><rect x="496" y="308" width="38" height="42" fill="transparent"/><polygon points="508,314 522,326 522,314 508,326"/><text class="valvelabel" x="515" y="344" style="text-anchor:middle">HV004</text></g>
+  <g id="eq-HV005" class="eq valve" data-id="HV005"><rect x="699" y="415" width="42" height="36" fill="transparent"/><polygon points="713,434 727,446 727,434 713,446"/><text class="valvelabel" x="720" y="428" style="text-anchor:middle">HV005</text></g>
+
+  <!-- ===================== leaders ===================== -->
+  <g fill="none">
+    <path class="leader" d="M150 141 H265 M150 243 H265 M150 345 H265 M150 464 H320 M150 541 H211"/>
+    <path class="leader" d="M390 200 V440 M385 200 H390 M385 440 H390 M390 440 L404 470"/>
+    <path class="leader" d="M750 261 L680 240"/>
+  </g>
+
+  <!-- ===================== sensor tags ===================== -->
+  <g id="sen-T705" class="sen" data-id="T705" data-grp="T"><rect class="tag" x="20" y="129" width="130" height="24" rx="12"/><rect class="stripe" x="20" y="129" width="7" height="24" rx="3.5"/><text class="tagid" x="34" y="145">T705</text><text class="tagval" id="val-T705" x="142" y="145"></text></g>
+  <g id="sen-T712" class="sen" data-id="T712" data-grp="T"><rect class="tag" x="20" y="231" width="130" height="24" rx="12"/><rect class="stripe" x="20" y="231" width="7" height="24" rx="3.5"/><text class="tagid" x="34" y="247">T712</text><text class="tagval" id="val-T712" x="142" y="247"></text></g>
+  <g id="sen-T711" class="sen" data-id="T711" data-grp="T"><rect class="tag" x="20" y="333" width="130" height="24" rx="12"/><rect class="stripe" x="20" y="333" width="7" height="24" rx="3.5"/><text class="tagid" x="34" y="349">T711</text><text class="tagval" id="val-T711" x="142" y="349"></text></g>
+  <g id="sen-T709" class="sen" data-id="T709" data-grp="T"><rect class="tag" x="20" y="452" width="130" height="24" rx="12"/><rect class="stripe" x="20" y="452" width="7" height="24" rx="3.5"/><text class="tagid" x="34" y="468">T709</text><text class="tagval" id="val-T709" x="142" y="468"></text></g>
+  <g id="sen-T703" class="sen" data-id="T703" data-grp="T"><rect class="tag" x="20" y="529" width="130" height="24" rx="12"/><rect class="stripe" x="20" y="529" width="7" height="24" rx="3.5"/><text class="tagid" x="34" y="545">T703</text><text class="tagval" id="val-T703" x="142" y="545"></text></g>
+  <g id="sen-PDI701" class="sen" data-id="PDI701" data-grp="D"><rect class="tag" x="400" y="470" width="130" height="24" rx="12"/><rect class="stripe" x="400" y="470" width="7" height="24" rx="3.5"/><text class="tagid" x="414" y="486">PDI701</text><text class="tagval" id="val-PDI701" x="522" y="486"></text></g>
+  <g id="sen-FT704" class="sen" data-id="FT704" data-grp="F"><rect class="tag" x="405" y="229" width="130" height="24" rx="12"/><rect class="stripe" x="405" y="229" width="7" height="24" rx="3.5"/><text class="tagid" x="419" y="245">FT704</text><text class="tagval" id="val-FT704" x="527" y="245"></text></g>
+  <g id="sen-FT703" class="sen" data-id="FT703" data-grp="F"><rect class="tag" x="585" y="374" width="130" height="24" rx="12"/><rect class="stripe" x="585" y="374" width="7" height="24" rx="3.5"/><text class="tagid" x="599" y="390">FT703</text><text class="tagval" id="val-FT703" x="707" y="390"></text></g>
+  <g id="sen-FYI702" class="sen" data-id="FYI702" data-grp="F"><rect class="tag" x="750" y="212" width="130" height="24" rx="12"/><rect class="stripe" x="750" y="212" width="7" height="24" rx="3.5"/><text class="tagid" x="764" y="228">FYI702</text><text class="tagval" id="val-FYI702" x="872" y="228"></text></g>
+  <g id="sen-PDI702" class="sen" data-id="PDI702" data-grp="D"><rect class="tag" x="750" y="249" width="130" height="24" rx="12"/><rect class="stripe" x="750" y="249" width="7" height="24" rx="3.5"/><text class="tagid" x="764" y="265">PDI702</text><text class="tagval" id="val-PDI702" x="872" y="265"></text></g>
+  <g id="sen-PY23" class="sen" data-id="PY23" data-grp="P"><rect class="tag" x="750" y="52" width="130" height="24" rx="12"/><rect class="stripe" x="750" y="52" width="7" height="24" rx="3.5"/><text class="tagid" x="764" y="68">PY23</text><text class="tagval" id="val-PY23" x="872" y="68"></text></g>
+</svg>
